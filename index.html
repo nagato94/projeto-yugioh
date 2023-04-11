@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/estilos.css">
     <link rel="stylesheet" href="./src/css/responsivo.css">
+
+
 </head>
 
 <body>
@@ -24,45 +26,85 @@
             <img class="imagem" src="src/imagens/yugi4.png" alt="Yugioh">
             <img class="imagem" src="src/imagens/yugi5.jpg" alt="Yugioh">
             <img class="imagem" src="src/imagens/yugi6.jpg" alt="Yugioh">
+
+            
+        </div>
+
+        <div class="botoes-carrossel">
+            <button class="botao selecionado"></button>
+            <button class="botao"></button>
+            <button class="botao"></button>
+            <button class="botao"></button>
+            <button class="botao"></button>
+            <button class="botao"></button>
         </div>
 
         <div class="conteudo">
             <div class="informacoes">
                 <img class="logo" src="src/imagens/logo.png" alt="Logo Yugioh">
-
+                
                 <p class="descricao">
-                    Yu-Gi-Oh! se passa em um universo emocionante baseado em um jogo de cards de Monstros, Magias e Armadilhas. A franquia Yu-Gi-Oh! conta com séries de mangás, séries animadas, diversos jogos de vídeo game sendo os mais famosos atualmente Yu-Gi-Oh! Master Duel e Yu-Gi-Oh! Duel-Links
+                    Yu-Gi-Oh! se passa em um universo emocionante baseado em um jogo de cards de Monstros, Magias e
+                    Armadilhas. A franquia Yu-Gi-Oh! conta com séries de mangás, séries animadas, diversos jogos de
+                    vídeo game sendo os mais famosos atualmente Yu-Gi-Oh! Master Duel e Yu-Gi-Oh! Duel-Links
                 </p>
             </div>
 
-            <div class="botoes-carrossel">
-                <button class="botao selecionado" ></button>
-                <button class="botao"></button>
-                <button class="botao"></button>
-                <button class="botao"></button>
-                <button class="botao"></button>
-                <button class="botao"></button>
-            </div>
+
         </div>
 
         <aside class="menu-lateral">
             <ul>
                 <li>
-                    
+
                     <a href="https://github.com/nagato94" target="_blank">
                         <img src="src/imagens/github.svg" alt="icone github" class="icone">
-                </a>
+                    </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/ka%C3%ADque-costa-30ba50270/" target="_blank">
                         <img src="src/imagens/linkedin-in.svg" alt="icone linkedin" class="icone">
-                    
-                </a>
+
+                    </a>
                 </li>
             </ul>
         </aside>
     </main>
+
     <script src="./src/js/index.js"></script>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.carrossel').slick({
+                dots: false,
+                speed: 300,
+                infinite: true,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+
+
 </body>
 
 </html>
